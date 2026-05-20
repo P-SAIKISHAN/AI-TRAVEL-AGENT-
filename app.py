@@ -1,29 +1,56 @@
-import streamlit as st
+from flask import Flask, render_template, request, jsonify
 from src.core.planner import TravelPlanner
 from dotenv import load_dotenv
+import os
 
-st.set_page_config(page_title="AI Travel Planner")
-st.title("AI Travel Itineary Planner")
-st.write("Plan your day trip itineary by entering your city and interests")
+app = Flask(__name__)
+app.template_folder = 'templates'
+app.static_folder = 'static'
 
 load_dotenv()
 
-with st.form("planner_form"):
-    city = st.text_input("Enter the city name for your trip")
-    interests = st.text_input("Enter your interests (comma-seperated )")
-    submitted = st.form_submit_button("Generate itineary")
+@app.route('/')
+def index():
+    """Render the main page"""
+    return render_template('index.html')
 
-    if submitted:
-        if city and interests:
-            planner = TravelPlanner()
-            planner.set_city(city)
-            planner.set_interests(interests)
-            itineary = planner.create_itineary()
+@app.route('/generate-itinerary', methods=['POST'])
+def generate_itinerary():
+    """Generate travel itinerary based on user input"""
+    try:
+        data = request.get_json()
+        city = data.get('city', '').strip()
+        interests = data.get('interests', '').strip()
+        
+        if not city or not interests:
+            return jsonify({
+                'success': False,
+                'error': 'Please fill in both City and Interests to proceed.'
+            }), 400
+        
+        # Initialize planner and generate itinerary
+        planner = TravelPlanner()
+        planner.set_city(city)
+        planner.set_interests(interests)
+        itinerary = planner.create_itineary()
+        
+        return jsonify({
+            'success': True,
+            'itinerary': itinerary,
+            'city': city,
+            'interests': interests
+        }), 200
+        
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': f'An error occurred: {str(e)}'
+        }), 500
 
-            st.subheader("📄 Your Itineary")
-            st.markdown(itineary)
-        else:
-            st.warning("Please fill City or Interest to move forward")
+@app.route('/about')
+def about():
+    """Render the about page"""
+    return render_template('about.html')
 
-
-
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=5000)
