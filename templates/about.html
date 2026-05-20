@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - AI Travel Itinerary Planner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-plane"></i>
+                <span>AI Travel Planner</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about" class="active">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container about-container">
+        <div class="about-header">
+            <h1>About AI Travel Planner</h1>
+            <p>Discover how AI transforms your travel planning experience</p>
+        </div>
+
+        <div class="about-content">
+            <section class="about-section">
+                <div class="section-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h2>Our Mission</h2>
+                <p>
+                    We believe travel should be effortless and personalized. Our AI Travel Planner uses advanced 
+                    artificial intelligence to create custom itineraries that match your unique interests and preferences, 
+                    turning your travel dreams into reality.
+                </p>
+            </section>
+
+            <section class="about-section">
+                <div class="section-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h2>How It Works</h2>
+                <p>
+                    Simply enter your destination city and interests. Our AI engine analyzes thousands of attractions, 
+                    experiences, and activities to craft a personalized itinerary that perfectly aligns with your travel style. 
+                    Get recommendations that go beyond the typical tourist path.
+                </p>
+            </section>
+
+            <section class="about-section">
+                <div class="section-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h2>Why Choose Us?</h2>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> Personalized itineraries tailored to your interests</li>
+                    <li><i class="fas fa-check"></i> AI-powered recommendations for authentic experiences</li>
+                    <li><i class="fas fa-check"></i> Save time on travel planning</li>
+                    <li><i class="fas fa-check"></i> Discover hidden gems beyond mainstream tourism</li>
+                    <li><i class="fas fa-check"></i> Easy-to-use interface for all travelers</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="cta-section">
+            <h2>Ready to Plan Your Adventure?</h2>
+            <a href="/" class="btn btn-primary btn-large">
+                <i class="fas fa-plane"></i> Start Planning Now
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 AI Travel Planner. Plan smarter, travel better.</p>
+        </div>
+    </footer>
+</body>
+</html>
