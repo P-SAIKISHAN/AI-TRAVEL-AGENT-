@@ -2,4 +2,4 @@
 venv/
 AI_TRAVEL_AGENT.egg-info/
 __pycache__/
-*.pyc
+*.pyclogs/ 
