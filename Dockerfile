@@ -24,4 +24,4 @@ RUN pip install --no-cache-dir -e .
 EXPOSE 5000
 
 # Run the Flask app
-CMD ["python", "app.py"]
+CMD ["python", "app.py", "--host=0.0.0.0", "--port=5000"]
