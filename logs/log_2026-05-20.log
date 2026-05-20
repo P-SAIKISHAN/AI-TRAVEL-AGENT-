@@ -33,3 +33,28 @@
 2026-05-20 06:39:34,375 - INFO - Starting Flask app on port 5000 with debug=True
 2026-05-20 06:39:34,393 - WARNING -  * Debugger is active!
 2026-05-20 06:39:34,402 - INFO -  * Debugger PIN: 100-468-656
+2026-05-20 06:49:36,023 - INFO - Starting Flask app on port 5000 with debug=True
+2026-05-20 06:49:36,058 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.7:5000
+2026-05-20 06:49:36,058 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-20 06:49:36,075 - INFO -  * Restarting with watchdog (windowsapi)
+2026-05-20 06:49:38,996 - INFO - Starting Flask app on port 5000 with debug=True
+2026-05-20 06:49:39,013 - WARNING -  * Debugger is active!
+2026-05-20 06:49:39,017 - INFO -  * Debugger PIN: 100-468-656
+2026-05-20 06:49:43,447 - INFO - Index page requested
+2026-05-20 06:49:43,451 - INFO - 127.0.0.1 - - [20/May/2026 06:49:43] "GET / HTTP/1.1" 200 -
+2026-05-20 06:49:43,818 - INFO - 127.0.0.1 - - [20/May/2026 06:49:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-20 06:49:43,891 - INFO - 127.0.0.1 - - [20/May/2026 06:49:43] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2026-05-20 06:50:20,754 - INFO - Generating itinerary for city: Udaipur, interests: lake , city palace, monsoon palace
+2026-05-20 06:50:20,754 - INFO - Initializing TravelPlanner...
+2026-05-20 06:50:20,754 - INFO - Intilaized TravelPlanner instance
+2026-05-20 06:50:20,754 - INFO - TravelPlanner initialized successfully!
+2026-05-20 06:50:20,754 - INFO - City set sucesfully
+2026-05-20 06:50:20,754 - INFO - Interest also set sucesfully..
+2026-05-20 06:50:20,754 - INFO - Gnerating itineary for Udaipur and for interests : ['lake', 'city palace', 'monsoon palace']
+2026-05-20 06:50:22,011 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-20 06:50:22,038 - INFO - Itineary generated sucesffully..
+2026-05-20 06:50:22,038 - INFO - Itinerary generated successfully
+2026-05-20 06:50:22,038 - INFO - 127.0.0.1 - - [20/May/2026 06:50:22] "POST /generate-itinerary HTTP/1.1" 200 -
