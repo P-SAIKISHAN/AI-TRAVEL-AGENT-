@@ -136,6 +136,11 @@ if __name__ == '__main__':
     debug = os.environ.get("DEBUG", "True").lower() == "true"
 
     logger.info(f"Starting Flask app on port {port} with debug={debug}")
+    print("\n" + "="*60)
+    print(f"✅ Your AI Travel Agent is running!")
+    print(f"🌐 Open your browser and go to:")
+    print(f"   👉 http://localhost:{port}/")
+    print("="*60 + "\n")
 
     app.run(
         host="0.0.0.0",
