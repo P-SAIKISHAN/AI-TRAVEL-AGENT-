@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kibana
-  namespace: ai-travel-agent
+  namespace: logging
 spec:
   replicas: 1
   selector:
@@ -18,7 +18,7 @@ spec:
           image: docker.elastic.co/kibana/kibana:7.17.0
           env:
             - name: ELASTICSEARCH_HOSTS
-              value: http://elasticsearch.ai-travel-agent.svc.cluster.local:9200
+              value: http://elasticsearch.logging.svc.cluster.local:9200
           ports:
             - containerPort: 5601
           resources:
@@ -34,7 +34,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: kibana
-  namespace: ai-travel-agent
+  namespace: logging
 spec:
   type: NodePort
   selector:

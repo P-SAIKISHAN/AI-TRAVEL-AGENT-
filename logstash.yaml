@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: logstash-config
-  namespace: ai-travel-agent
+  namespace: logging
 data:
   logstash.conf: |
     input {
@@ -12,7 +12,7 @@ data:
     }
 
     filter {
-      if [kubernetes][namespace] == "ai-travel-agent" {
+      if [kubernetes][namespace] == "logging" {
         mutate {
           add_field => { "[@metadata][index_prefix]" => "ai-travel-agent" }
         }
@@ -21,7 +21,7 @@ data:
 
     output {
       elasticsearch {
-        hosts => ["http://elasticsearch.ai-travel-agent.svc.cluster.local:9200"]
+        hosts => ["http://elasticsearch.logging.svc.cluster.local:9200"]
         index => "ai-travel-agent-%{+YYYY.MM.dd}"
       }
     }
@@ -31,7 +31,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: logstash
-  namespace: ai-travel-agent
+  namespace: logging
 spec:
   replicas: 1
   selector:
@@ -72,7 +72,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: logstash
-  namespace: ai-travel-agent
+  namespace: logging
 spec:
   selector:
     app: logstash
