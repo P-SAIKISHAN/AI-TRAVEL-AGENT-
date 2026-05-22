@@ -58,3 +58,42 @@
 2026-05-20 06:50:22,038 - INFO - Itineary generated sucesffully..
 2026-05-20 06:50:22,038 - INFO - Itinerary generated successfully
 2026-05-20 06:50:22,038 - INFO - 127.0.0.1 - - [20/May/2026 06:50:22] "POST /generate-itinerary HTTP/1.1" 200 -
+2026-05-20 09:03:03,967 - INFO - Starting Flask app on port 5000 with debug=True
+2026-05-20 09:03:04,008 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.7:5000
+2026-05-20 09:03:04,008 - INFO - [33mPress CTRL+C to quit[0m
+2026-05-20 09:03:04,023 - INFO -  * Restarting with watchdog (windowsapi)
+2026-05-20 09:03:06,919 - INFO - Starting Flask app on port 5000 with debug=True
+2026-05-20 09:03:06,935 - WARNING -  * Debugger is active!
+2026-05-20 09:03:06,954 - INFO -  * Debugger PIN: 100-468-656
+2026-05-20 09:03:10,464 - INFO - Index page requested
+2026-05-20 09:03:10,477 - INFO - 127.0.0.1 - - [20/May/2026 09:03:10] "GET / HTTP/1.1" 200 -
+2026-05-20 09:03:10,828 - INFO - 127.0.0.1 - - [20/May/2026 09:03:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-20 09:03:10,902 - INFO - 127.0.0.1 - - [20/May/2026 09:03:10] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2026-05-20 09:03:26,580 - INFO - Index page requested
+2026-05-20 09:03:26,580 - INFO - 127.0.0.1 - - [20/May/2026 09:03:26] "GET / HTTP/1.1" 200 -
+2026-05-20 09:03:26,848 - INFO - 127.0.0.1 - - [20/May/2026 09:03:26] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-05-20 09:03:26,942 - INFO - 127.0.0.1 - - [20/May/2026 09:03:26] "GET /static/js/script.js HTTP/1.1" 200 -
+2026-05-20 09:03:27,445 - INFO - 127.0.0.1 - - [20/May/2026 09:03:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-05-20 09:03:45,057 - INFO - About page requested
+2026-05-20 09:03:45,062 - INFO - 127.0.0.1 - - [20/May/2026 09:03:45] "GET /about HTTP/1.1" 200 -
+2026-05-20 09:03:45,317 - INFO - 127.0.0.1 - - [20/May/2026 09:03:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-20 09:03:51,753 - INFO - Index page requested
+2026-05-20 09:03:51,754 - INFO - 127.0.0.1 - - [20/May/2026 09:03:51] "GET / HTTP/1.1" 200 -
+2026-05-20 09:03:52,110 - INFO - 127.0.0.1 - - [20/May/2026 09:03:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-05-20 09:03:52,111 - INFO - 127.0.0.1 - - [20/May/2026 09:03:52] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2026-05-20 09:04:53,102 - INFO - Generating itinerary for city: udaipur, interests: kumbalgarh fort,nathdwara
+2026-05-20 09:04:53,102 - INFO - Initializing TravelPlanner...
+2026-05-20 09:04:53,102 - INFO - Intilaized TravelPlanner instance
+2026-05-20 09:04:53,102 - INFO - TravelPlanner initialized successfully!
+2026-05-20 09:04:53,103 - INFO - City set sucesfully
+2026-05-20 09:04:53,103 - INFO - Interest also set sucesfully..
+2026-05-20 09:04:53,104 - INFO - Gnerating itineary for udaipur and for interests : ['kumbalgarh fort', 'nathdwara']
+2026-05-20 09:04:54,117 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-05-20 09:04:54,147 - INFO - Itineary generated sucesffully..
+2026-05-20 09:04:54,147 - INFO - Itinerary generated successfully
+2026-05-20 09:04:54,147 - INFO - 127.0.0.1 - - [20/May/2026 09:04:54] "POST /generate-itinerary HTTP/1.1" 200 -
+2026-05-22 05:48:26,395 - INFO -  * Detected change in 'E:\\Conda\\cwp.py', reloading
+2026-05-22 05:48:26,885 - INFO -  * Restarting with watchdog (windowsapi)
