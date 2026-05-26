@@ -3,20 +3,25 @@ kind: PersistentVolumeClaim
 metadata:
   name: elasticsearch-pvc
   namespace: logging
+
 spec:
   accessModes:
     - ReadWriteOnce
+
   resources:
     requests:
       storage: 2Gi
+
   storageClassName: standard
 
 ---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: elasticsearch
   namespace: logging
+
 spec:
   replicas: 1
 
@@ -42,13 +47,13 @@ spec:
 
           env:
             - name: discovery.type
-              value: single-node
+              value: "single-node"
 
             - name: xpack.security.enabled
               value: "false"
 
             - name: ES_JAVA_OPTS
-              value: "-Xms512m -Xmx512m -XX:-UseContainerSupport"
+              value: "-Xms512m -Xmx512m"
 
           resources:
             requests:
@@ -69,6 +74,7 @@ spec:
             claimName: elasticsearch-pvc
 
 ---
+
 apiVersion: v1
 kind: Service
 metadata:
