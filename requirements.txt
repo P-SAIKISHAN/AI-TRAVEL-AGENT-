@@ -1,7 +1,12 @@
-langchain
-langchain_core
-langchain_groq
-langchain_community
-python-dotenv
 flask
+gunicorn
+python-dotenv
 prometheus-client
+
+langchain
+langchain-core
+langchain-groq
+langchain-community
+
+requests
+pydantic
